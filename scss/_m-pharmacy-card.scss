@@ -1,0 +1,158 @@
+.pharmacy-card {
+  padding: 20px;
+  border-radius: 10px;
+
+  @include mobile {
+    padding: 8px;
+  }
+
+  &__figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 42px;
+    padding: 10px 0;
+    height: 180px;
+
+    @include tablet {
+      margin: 0 0 32px;
+    }
+
+    @include mobile {
+      height: auto;
+      margin: 0 0 24px;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+
+      @include mobile {
+        max-width: 136px;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin: 0 0 10px;
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    margin: 0 0 32px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+
+    @include tablet {
+      margin: 0 0 24px;
+    }
+
+    @include mobile {
+      margin: 0 0 16px;
+    }
+
+    &-stock {
+      color: $green;
+    }
+
+    &-expiration {
+      color: $deepgray;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    @include tablet {
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    &-old {
+      color: $darkgray;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      text-decoration: line-through;
+
+      @include laptop {
+        font-size: 18px;
+      }
+
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+
+    &-new {
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+
+      @include laptop {
+        font-size: 30px;
+      }
+
+      @include tablet {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__delivery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: $deepgray;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url(../assets/icons/delivery-box.svg) center no-repeat;
+      background-size: 16px;
+    }
+  }
+}

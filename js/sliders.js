@@ -7,12 +7,22 @@ pharmaciesSections.forEach((section) => {
 
   const swiper = new Swiper(swiperElem, {
     spaceBetween: 10,
-    slidesPerView: 2,
     breakpoints: {
-      576: {
+      320: {
         slidesPerView: 2,
+        grid: {
+          rows: 2,
+        },
+      },
+      576: {
+        grid: {
+          rows: 1,
+        },
       },
       768: {
+        slidesPerView: 2,
+      },
+      992: {
         slidesPerView: 3,
       },
       1120: {

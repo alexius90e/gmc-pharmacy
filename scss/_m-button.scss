@@ -1,4 +1,24 @@
 .button {
-  
+  display: inline-block;
+  max-width: 180px;
+  width: 100%;
+  padding: 16px;
+  color: $white;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 100%;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  background-color: $red;
+  transition: $baseTransition;
 
+  &:hover {
+    filter: brightness(0.95);
+  }
+
+  &:active {
+    filter: brightness(0.9);
+  }
 }

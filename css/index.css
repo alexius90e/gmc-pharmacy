@@ -59,6 +59,29 @@ figure {
   padding: 0 16px;
 }
 
+.button {
+  display: inline-block;
+  max-width: 180px;
+  width: 100%;
+  padding: 16px;
+  color: #ffffff;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 100%;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  background-color: #ec1818;
+  transition: all ease-in-out 0.15s;
+}
+.button:hover {
+  filter: brightness(0.95);
+}
+.button:active {
+  filter: brightness(0.9);
+}
+
 .section-title {
   display: flex;
   align-items: center;
@@ -116,6 +139,167 @@ figure {
   height: 16px;
   background: url(../assets/icons/arrow-right.svg) center no-repeat;
   background-size: contain;
+}
+
+.pharmacy-card {
+  padding: 20px;
+  border-radius: 10px;
+}
+@media (max-width: 576px) {
+  .pharmacy-card {
+    padding: 8px;
+  }
+}
+.pharmacy-card__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 42px;
+  padding: 10px 0;
+  height: 180px;
+}
+@media (max-width: 768px) {
+  .pharmacy-card__figure {
+    margin: 0 0 32px;
+  }
+}
+@media (max-width: 576px) {
+  .pharmacy-card__figure {
+    height: auto;
+    margin: 0 0 24px;
+  }
+}
+.pharmacy-card__figure-image {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+@media (max-width: 576px) {
+  .pharmacy-card__figure-image {
+    max-width: 136px;
+    width: 100%;
+    height: auto;
+  }
+}
+.pharmacy-card__title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  margin: 0 0 10px;
+}
+@media (max-width: 768px) {
+  .pharmacy-card__title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .pharmacy-card__title {
+    font-size: 16px;
+  }
+}
+.pharmacy-card__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin: 0 0 32px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+@media (max-width: 768px) {
+  .pharmacy-card__info {
+    margin: 0 0 24px;
+  }
+}
+@media (max-width: 576px) {
+  .pharmacy-card__info {
+    margin: 0 0 16px;
+  }
+}
+.pharmacy-card__info-stock {
+  color: #219653;
+}
+.pharmacy-card__info-expiration {
+  color: #999999;
+}
+.pharmacy-card__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .pharmacy-card__price {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+}
+.pharmacy-card__price-old {
+  color: #777777;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  text-decoration: line-through;
+}
+@media (max-width: 992px) {
+  .pharmacy-card__price-old {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .pharmacy-card__price-old {
+    font-size: 16px;
+  }
+}
+.pharmacy-card__price-new {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+@media (max-width: 992px) {
+  .pharmacy-card__price-new {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .pharmacy-card__price-new {
+    font-size: 24px;
+  }
+}
+.pharmacy-card__buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .pharmacy-card__buttons {
+    margin-bottom: 16px;
+  }
+}
+.pharmacy-card__delivery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  color: #999999;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.pharmacy-card__delivery::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(../assets/icons/delivery-box.svg) center no-repeat;
+  background-size: 16px;
 }
 
 .advertising__cards {
@@ -299,10 +483,18 @@ figure {
   position: relative;
 }
 .pharmacies__slider .swiper {
-  padding: 20px 0;
-  margin: -20px 0;
+  padding: 16px;
+  margin: -16px;
 }
-.pharmacies__slider .swiper-slide {
+@media (max-width: 576px) {
+  .pharmacies__slider .swiper {
+    height: 860px;
+  }
+}
+.pharmacies__slider .swiper-slide > * {
+  transition: box-shadow ease-in-out 0.2s;
+}
+.pharmacies__slider .swiper-slide > *:hover {
   box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
 }
 .pharmacies__slider .swiper-button-prev, .pharmacies__slider .swiper-button-next {
