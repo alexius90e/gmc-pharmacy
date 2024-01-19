@@ -22,4 +22,42 @@
   &:active {
     background-color: $darkgray;
   }
+
+  &_icon {
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url(../assets/icons/next-button.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: $baseTransition;
+    }
+
+    &:active::after {
+      background-image: url(../assets/icons/next-button-wh.svg);
+    }
+  }
+
+  &_light {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: $black;
+    width: fit-content;
+    border: 1px solid $gray;
+    background-color: $white;
+
+    &:hover {
+      background-color: $lightgray;
+    }
+
+    &:active {
+      color: $white;
+      background-color: $black;
+    }
+  }
 }

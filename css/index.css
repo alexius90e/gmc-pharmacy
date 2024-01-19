@@ -129,6 +129,38 @@ figure {
 .button:active {
   background-color: #777777;
 }
+.button_icon::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../assets/icons/next-button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: all ease-in-out 0.15s;
+}
+.button_icon:active::after {
+  background-image: url(../assets/icons/next-button-wh.svg);
+}
+.button_light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #111111;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+.button_light:hover {
+  background-color: #f6f6f6;
+}
+.button_light:active {
+  color: #ffffff;
+  background-color: #111111;
+}
 
 .input {
   display: inline-block;
@@ -175,7 +207,7 @@ figure {
   border-radius: 50px;
   border: 1px solid #cccccc;
   background-color: #ffffff;
-  transition: background-color;
+  transition: all ease-in-out 0.15s;
   cursor: pointer;
 }
 @media (max-width: 768px) {
@@ -985,5 +1017,60 @@ figure {
   margin: 0;
 }
 .marketplace__card-description {
+  margin: 0;
+}
+
+.best-prices {
+  background-color: #f6f6f6;
+}
+.best-prices__wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 100px;
+}
+@media (max-width: 1200px) {
+  .best-prices__wrapper {
+    gap: 32px;
+  }
+}
+@media (max-width: 992px) {
+  .best-prices__wrapper {
+    flex-direction: column;
+  }
+}
+.best-prices__figure {
+  flex: 0 0 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 992px) {
+  .best-prices__figure {
+    flex: 0 1 auto;
+    justify-content: flex-start;
+  }
+}
+.best-prices__figure-image {
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.best-prices__content > * {
+  margin: 0 0 50px;
+}
+@media (max-width: 768px) {
+  .best-prices__content > * {
+    margin-bottom: 24px;
+  }
+}
+.best-prices__title {
+  text-align: left;
+}
+.best-prices__subtitle {
+  color: #999999;
+}
+.best-prices__more {
   margin: 0;
 }

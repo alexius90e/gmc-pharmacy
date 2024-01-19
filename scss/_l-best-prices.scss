@@ -1,0 +1,62 @@
+.best-prices {
+  background-color: $lightgray;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px;
+
+    @include desktop {
+      gap: 32px;
+    }
+
+    @include laptop {
+      flex-direction: column;
+    }
+  }
+
+  &__figure {
+    flex: 0 0 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include laptop {
+      flex: 0 1 auto;
+      justify-content: flex-start;
+    }
+
+    &-image {
+      display: block;
+      max-width: 400px;
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    & > * {
+      margin:  0 0 50px;
+
+      @include tablet {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__subtitle {
+    color: $deepgray;
+  }
+
+  &__description {
+  }
+
+  &__more {
+    margin: 0;
+  }
+}
