@@ -4,10 +4,6 @@
   justify-content: space-between;
   gap: 24px;
   margin: 0 0 50px;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 130%;
 
   @include tablet {
     justify-content: center;
@@ -16,7 +12,7 @@
     text-align: center;
   }
 
-  &__link {
+  &__button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,11 +36,12 @@
     }
 
     &:hover {
-      filter: brightness(0.95);
+      background-color: $lightgray;
     }
 
     &:active {
-      filter: brightness(0.9);
+      color: $white;
+      background-color: $black;
     }
 
     &::after {
@@ -52,8 +49,15 @@
       display: inline-block;
       width: 16px;
       height: 16px;
-      background: url(../assets/icons/arrow-right.svg) center no-repeat;
+      background-image: url(../assets/icons/next-button.svg);
+      background-repeat: no-repeat;
+      background-position: center;
       background-size: contain;
+      transition: $baseTransition;
+    }
+
+    &:active::after {
+      background-image: url(../assets/icons/next-button-wh.svg);
     }
   }
 }

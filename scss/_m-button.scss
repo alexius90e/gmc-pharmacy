@@ -13,12 +13,13 @@
   border-radius: 50px;
   background-color: $red;
   transition: $baseTransition;
+  cursor: pointer;
 
   &:hover {
-    filter: brightness(0.95);
+    background-color: $black;
   }
 
   &:active {
-    filter: brightness(0.9);
+    background-color: $darkgray;
   }
 }
