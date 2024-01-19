@@ -1,0 +1,80 @@
+.marketplace {
+  &__cards {
+    display: flex;
+    gap: 32px;
+    padding: 40px;
+    border-radius: 24px;
+    background-color: $lightgray;
+
+    @include laptop {
+      padding: 32px 24px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__card {
+    position: relative;
+    flex: 1 1 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 64px;
+
+    @include laptop {
+      padding-right: 48px;
+    }
+
+    @include tablet {
+      padding: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: url(../assets/icons/arrow-red.svg) center no-repeat;
+      background-size: contain;
+      transform: translateY(-50%);
+
+      @include tablet {
+        position: static;
+        transform: none;
+        margin-top: 12px;
+      }
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &-figure {
+      flex: 0 0 auto;
+      height: 56px;
+
+      &-image {
+        display: block;
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    &-title {
+      margin: 0;
+    }
+
+    &-description {
+      margin: 0;
+    }
+  }
+}
