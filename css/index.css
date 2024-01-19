@@ -53,7 +53,7 @@ figure {
   margin: 0;
 }
 
-.h2 {
+.title-48 {
   margin: 0;
   font-size: 48px;
   font-style: normal;
@@ -61,10 +61,43 @@ figure {
   line-height: 130%;
 }
 @media (max-width: 768px) {
-  .h2 {
+  .title-48 {
     font-size: 32px;
     text-align: center;
   }
+}
+
+.title-48 {
+  margin: 0;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+@media (max-width: 768px) {
+  .title-48 {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+
+.subtitle-24 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+@media (max-width: 768px) {
+  .subtitle-24 {
+    font-size: 20px;
+  }
+}
+
+.text-16 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
 }
 
 .container {
@@ -95,6 +128,19 @@ figure {
 }
 .button:active {
   background-color: #777777;
+}
+
+.input {
+  display: inline-block;
+  padding: 16px 20px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  border-radius: 50px;
+  border: none;
+  outline-color: rgba(236, 24, 24, 0.2);
+  outline-width: 1px;
 }
 
 .section-title {
@@ -129,7 +175,7 @@ figure {
   border-radius: 50px;
   border: 1px solid #cccccc;
   background-color: #ffffff;
-  transition: all ease-in-out 0.15s;
+  transition: background-color;
   cursor: pointer;
 }
 @media (max-width: 768px) {
@@ -328,6 +374,30 @@ figure {
     padding: 32px 0;
   }
 }
+@media (max-width: 768px) {
+  .section_with-button {
+    position: relative;
+    padding-bottom: 106px;
+  }
+}
+@media (max-width: 768px) {
+  .section_with-button .section-title__button {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    display: flex;
+    max-width: none;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 576px) {
+  .section_with-button .section-title__button {
+    left: 16px;
+    right: 16px;
+    width: auto;
+    transform: none;
+  }
+}
 
 .advertising-card {
   position: relative;
@@ -509,6 +579,11 @@ figure {
 
 .pharmacies__slider {
   position: relative;
+}
+@media (max-width: 768px) {
+  .pharmacies__slider {
+    margin-bottom: 24px;
+  }
 }
 .pharmacies__slider .swiper {
   padding: 16px;
@@ -727,4 +802,112 @@ figure {
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
+}
+
+.callback {
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .callback {
+    padding: 32px 0;
+  }
+}
+.callback__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px 100px;
+  border-radius: 24px;
+  background: linear-gradient(90deg, #ec1818 1.11%, #000 100%);
+}
+@media (max-width: 768px) {
+  .callback__wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 32px;
+  }
+}
+.callback__wrapper::before {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 50%;
+  display: block;
+  width: 485px;
+  aspect-ratio: 1.3/1;
+  background-image: url(../assets/drug.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateY(-50%);
+}
+@media (max-width: 992px) {
+  .callback__wrapper::before {
+    width: 340px;
+  }
+}
+@media (max-width: 768px) {
+  .callback__wrapper::before {
+    position: static;
+    width: 100%;
+    max-width: 340px;
+    transform: translateY(-32px);
+  }
+}
+.callback__content {
+  flex: 0 1 calc(100% - 460px);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media (max-width: 1200px) {
+  .callback__content {
+    flex: 0 1 calc(100% - 400px);
+  }
+}
+@media (max-width: 992px) {
+  .callback__content {
+    flex: 0 1 calc(100% - 260px);
+  }
+}
+@media (max-width: 768px) {
+  .callback__content {
+    transform: translateY(-32px);
+    gap: 24px;
+    margin-top: 12px;
+  }
+}
+.callback__title {
+  margin: 0;
+}
+.callback__description {
+  margin: 0;
+}
+.callback__form {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 992px) {
+  .callback__form {
+    flex-wrap: wrap;
+  }
+}
+.callback__form .input {
+  flex: 1 1 auto;
+  min-width: 60%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.callback__form .button {
+  flex: 0 0 auto;
+  display: inline-block;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .callback__form .button {
+    flex: 1 1 auto;
+    max-width: none;
+  }
 }

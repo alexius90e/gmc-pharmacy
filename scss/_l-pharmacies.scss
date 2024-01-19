@@ -1,6 +1,10 @@
 .pharmacies {
   &__slider {
     position: relative;
+    
+    @include tablet {
+      margin-bottom: 24px;
+    }
 
     & .swiper {
       padding: 16px;
