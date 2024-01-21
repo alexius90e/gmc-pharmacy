@@ -1,0 +1,28 @@
+.partners {
+  & .container {
+    max-width: 1920px;
+  }
+
+  & .section-title {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__slider {
+    & .swiper {
+      &-slide {
+        & img {
+          max-width: 178px;
+          width: 100%;
+          aspect-ratio: 1;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

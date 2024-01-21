@@ -1,18 +1,25 @@
 .section-title {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
   margin: 0 0 50px;
 
   @include tablet {
-    justify-content: center;
-    margin: 0 0 24px;
-    font-size: 32px;
-    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    max-width: 782px;
+
+    @include tablet {
+      max-width: none;
+    }
   }
 
   &__button {
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -35,3 +35,31 @@ pharmaciesSections.forEach((section) => {
     },
   });
 });
+
+const partnersSwiper = new Swiper('.partners .swiper', {
+  loop: true,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 1500,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 3,
+    },
+    360: {
+      slidesPerView: 4,
+    },
+    576: {
+      slidesPerView: 5,
+    },
+    768: {
+      slidesPerView: 6,
+    },
+    992: {
+      slidesPerView: 8,
+    },
+    1200: {
+      slidesPerView: 10
+    },
+  },
+});

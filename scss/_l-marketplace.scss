@@ -1,4 +1,9 @@
 .marketplace {
+
+  &__title {
+    text-align: left;
+  }
+
   &__cards {
     display: flex;
     gap: 32px;

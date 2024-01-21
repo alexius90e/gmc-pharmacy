@@ -53,10 +53,19 @@
     color: $deepgray;
   }
 
-  &__description {
-  }
-
   &__more {
     margin: 0;
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+
+    & .button {
+      @include mobile  {
+        max-width: none;
+        width: 100%;
+      }
+    }
   }
 }
