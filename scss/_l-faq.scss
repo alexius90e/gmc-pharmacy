@@ -1,0 +1,99 @@
+.faq {
+  position: relative;
+  overflow: hidden;
+  background-color: $lightgray;
+  background-image: url(../assets/faq-bg.png);
+  background-position: bottom left calc(100% + 220px);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  @media screen and (max-width: 1800px) {
+    background-position: bottom right -300px;
+  }
+
+  @media screen and (max-width: 1400px) {
+    background-position: bottom right -500px;
+  }
+
+  @include desktop {
+    background-position: bottom right -600px;
+  }
+
+  @include laptop {
+   background: $lightgray;
+  }
+
+  & .container  {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 42px;
+    padding: 0 0 8px;
+    overflow: auto;
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
+
+    & .button {
+      max-width: none;
+      text-wrap: nowrap;
+
+      &.active {
+        color: $white;
+        background-color: $black;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 926px;
+
+    &-item {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  &__accordeon {
+    margin: 0 0 8px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &-text {
+      margin: 24px 0;
+    }
+
+    &-question {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+
+      &-buttons {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        & .button {
+          padding: 15px 24px;
+        }
+      }
+    }
+  }
+}
