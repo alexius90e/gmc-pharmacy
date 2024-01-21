@@ -1183,6 +1183,11 @@ figure {
   position: relative;
   z-index: 2;
 }
+@media (max-width: 992px) {
+  .faq .container {
+    position: static;
+  }
+}
 .faq__title {
   text-align: left;
 }
@@ -1239,4 +1244,43 @@ figure {
 }
 .faq__accordeon-question-buttons .button {
   padding: 15px 24px;
+}
+
+.info__content {
+  padding: 40px;
+  border-radius: 16px;
+  background-color: #f6f6f6;
+}
+@media (max-width: 768px) {
+  .info__content {
+    padding: 16px;
+  }
+}
+.info__content > *:last-child {
+  margin-bottom: 0;
+}
+.info__title {
+  margin: 0 0 50px;
+}
+@media (max-width: 768px) {
+  .info__title {
+    margin-bottom: 24px;
+  }
+}
+.info__subtitle {
+  margin: 0 0 24px;
+}
+@media (max-width: 768px) {
+  .info__subtitle {
+    margin-bottom: 16px;
+  }
+}
+.info__text {
+  margin: 0 0 16px;
+  color: #777777;
+}
+@media (max-width: 768px) {
+  .info__text {
+    margin-bottom: 14px;
+  }
 }

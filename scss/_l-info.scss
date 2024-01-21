@@ -1,0 +1,40 @@
+.info {
+  &__content {
+    padding: 40px;
+    border-radius: 16px;
+    background-color: $lightgray;
+
+    @include tablet {
+      padding: 16px;
+    }
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 50px;
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 24px;
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 16px;
+    color: $darkgray;
+
+    @include tablet {
+      margin-bottom: 14px;
+    }
+  }
+}
