@@ -927,6 +927,7 @@ figure {
     color: #111111;
     font-size: 12px;
     font-weight: 400;
+    line-height: 160%;
     text-transform: none;
   }
 }
