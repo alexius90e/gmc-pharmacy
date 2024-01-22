@@ -1951,3 +1951,47 @@ figure {
     height: 64px;
   }
 }
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+}
+.main-nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+@media (max-width: 992px) {
+  .main-nav__menu {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+.main-nav__menu-item {
+  padding: 16px 8px;
+}
+@media (max-width: 1200px) {
+  .main-nav__menu-item {
+    padding: 16px 4px;
+  }
+}
+@media (max-width: 992px) {
+  .main-nav__menu-item {
+    padding: 8px;
+  }
+}
+.main-nav__menu-item-text {
+  color: #777777;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  transition: all ease-in-out 0.15s;
+}
+.main-nav__menu-item:hover .main-nav__menu-item-text {
+  color: #111111;
+}

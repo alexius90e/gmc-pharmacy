@@ -1,0 +1,44 @@
+.main-nav {
+  @include tablet {
+    display: none;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include laptop {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      padding: 16px 8px;
+
+      @include desktop {
+        padding: 16px 4px;
+      }
+
+      @include laptop {
+        padding: 8px;
+      }
+
+      &-text {
+        color: $darkgray;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        transition: $baseTransition;
+      }
+
+      &:hover &-text {
+        color: $black;
+      }
+    }
+  }
+}
