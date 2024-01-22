@@ -1,7 +1,7 @@
 const accordeons = document.querySelectorAll(".accordeon");
 
 accordeons.forEach((accordeon) => {
-  const accordeonToggler = accordeon.querySelector('.accordeon__toggler')
+  const accordeonToggler = accordeon.querySelector(".accordeon__toggler");
   accordeonToggler.addEventListener("click", () => {
     closeAccordeons(accordeon);
     accordeon.classList.toggle("active");
