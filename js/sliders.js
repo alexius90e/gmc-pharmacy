@@ -1,3 +1,26 @@
+const mainSwiper = new Swiper(".main-slider .swiper", {
+  spaceBetween: 40,
+  centeredSlides: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    1480: {
+      slidesPerView: 1.25,
+    },
+    1600: {
+      slidesPerView: 1.5,
+    },
+  },
+  navigation: {
+    nextEl: '.main-slider .swiper-button-next',
+    prevEl: '.main-slider .swiper-button-prev',
+  },
+  pagination: {
+    el: '.main-slider .swiper-pagination',
+  },
+});
+
 const pharmaciesSections = document.querySelectorAll(".pharmacies");
 
 pharmaciesSections.forEach((section) => {
@@ -36,7 +59,7 @@ pharmaciesSections.forEach((section) => {
   });
 });
 
-const partnersSwiper = new Swiper('.partners .swiper', {
+const partnersSwiper = new Swiper(".partners .swiper", {
   loop: true,
   spaceBetween: 10,
   autoplay: {
@@ -59,7 +82,7 @@ const partnersSwiper = new Swiper('.partners .swiper', {
       slidesPerView: 8,
     },
     1200: {
-      slidesPerView: 10
+      slidesPerView: 10,
     },
   },
 });

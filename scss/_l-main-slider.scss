@@ -1,0 +1,316 @@
+.main-slider {
+  position: relative;
+  padding: 16px 0;
+  background: linear-gradient(90deg, #ec1818 0%, #2759bc 63.67%);
+
+  @include desktop {
+    padding: 16px;
+  }
+
+  & .swiper {
+    &-button {
+      &-prev,
+      &-next {
+        display: block;
+        width: 48px;
+        height: 48px;
+        border-radius: 50px;
+        border: 1px solid $gray;
+        background-color: rgba($color: $white, $alpha: 0.2);
+        background-image: url(../assets/icons/next-button-wh.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 16px;
+        transition: $baseTransition;
+
+        @include desktop {
+          width: 40px;
+          height: 40px;
+        }
+
+        @include laptop {
+          width: 36px;
+          height: 36px;
+        }
+
+        @include tablet {
+          display: none;
+        }
+
+        &:hover {
+          background-color: $black;
+          background-image: url(../assets/icons/next-button-wh.svg);
+        }
+
+        &:active {
+          background-color: $red;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &-prev {
+        left: calc((100% - 1170px) / 2 - 40px);
+        transform: rotate(180deg);
+
+        @media screen and (max-width: 1280px) {
+          left: 20px;
+        }
+      }
+
+      &-next {
+        right: calc((100% - 1170px) / 2 - 40px);
+
+        @media screen and (max-width: 1280px) {
+          right: 20px;
+        }
+      }
+    }
+
+    &-pagination {
+      &-bullets {
+        bottom: 28px !important;
+        left: 50% !important;
+        display: flex;
+        justify-content: flex-end;
+        max-width: 1170px;
+        padding: 0 34px;
+        box-sizing: border-box;
+        transform: translateX(-50%);
+        
+
+        @include laptop {
+          justify-content: center;
+        }
+      }
+
+      &-bullet {
+        width: 20px;
+        height: 2px;
+        border-radius: 0;
+        background-color: $white;
+      }
+    }
+  }
+
+  &__slide {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1170px;
+    height: 520px;
+    margin: 0 auto;
+    padding: 24px 54px;
+    box-sizing: border-box;
+    border-radius: 24px;
+    border: 1px solid $gray;
+
+    @include desktop {
+      padding: 16px 16px 32px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: 432px;
+    }
+
+    &-tag {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      padding: 4px 6px;
+      color: rgba($color: $white, $alpha: 0.6);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.2);
+
+      @include desktop {
+        top: 16px;
+        right: 16px;
+      }
+    }
+
+    &-figure {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 484px;
+      height: 100%;
+
+      @include laptop {
+        max-width: 50%;
+      }
+
+      @include tablet {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        max-width: none;
+        height: auto;
+      }
+
+      &-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        @include tablet {
+          max-height: 360px;
+        }
+
+        @include mobile {
+          max-height: 360px;
+        }
+      }
+    }
+
+    &-info {
+      position: absolute;
+      left: 54px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+
+      @include desktop {
+        left: 16px;
+      }
+
+      @include laptop {
+        max-width: 50%;
+      }
+
+      @include tablet {
+        position: relative;
+        top: auto;
+        left: auto;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        max-width: none;
+        transform: none;
+      }
+
+      &-title {
+        max-width: 422px;
+        margin: 0;
+        color: $white;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+
+        @include laptop {
+          max-width: 360px;
+        }
+
+        @include tablet {
+          flex: 1 1 auto;
+          max-width: calc(100% - 142px);
+          font-size: 28px;
+        }
+
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+
+      &-discount {
+        color: $white;
+        font-size: 254px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: -30px;
+
+        @include laptop {
+          font-size: 120px;
+          letter-spacing: normal;
+        }
+
+        @include tablet {
+          position: absolute;
+          top: 36px;
+          right: 0;
+          font-size: 74px;
+          letter-spacing: -7px;
+        }
+      }
+
+      &-prices {
+        position: absolute;
+        top: 0;
+        left: calc(100% + 4px);
+        width: max-content;
+
+        @include tablet {
+          position: static;
+          margin-bottom: 24px;
+        }
+
+        &-new {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 45px;
+          margin: 0 0 16px;
+          padding: 0 10px;
+          box-sizing: border-box;
+          color: $white;
+          font-size: 36px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 100%;
+          border-radius: 8px;
+          background-color: $black;
+
+          @include tablet {
+            height: 37px;
+            margin: 0 0 10px;
+            font-size: 24px;
+          }
+        }
+
+        &-old {
+          padding-left: 10px;
+          color: $white;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 550;
+          text-decoration: line-through;
+          opacity: 0.5;
+
+          @include tablet {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    &-disclaimer {
+      color: $white;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 550;
+      line-height: 150%;
+      text-transform: uppercase;
+      opacity: 0.5;
+
+      @include tablet {
+        font-size: 12px;
+      }
+    }
+  }
+}
