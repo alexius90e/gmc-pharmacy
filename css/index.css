@@ -1959,6 +1959,7 @@ figure {
   }
 }
 .main-nav__menu {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1974,6 +1975,7 @@ figure {
 }
 .main-nav__menu-item {
   padding: 16px 8px;
+  cursor: pointer;
 }
 @media (max-width: 1200px) {
   .main-nav__menu-item {
@@ -1995,6 +1997,102 @@ figure {
 }
 .main-nav__menu-item:hover .main-nav__menu-item-text {
   color: #111111;
+}
+.main-nav__menu-submenu-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% - 1px);
+  z-index: 100;
+  display: none;
+  padding: 16px;
+  border-radius: 0px 0px 8px 8px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 1200px) {
+  .main-nav__menu-submenu-wrapper {
+    left: -16px;
+    right: -16px;
+  }
+}
+.main-nav__menu-item:hover .main-nav__menu-submenu-wrapper {
+  display: flex;
+}
+.main-nav__submenu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.main-nav__submenu-item {
+  flex: 1 1 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+.main-nav__submenu-link {
+  display: inline-block;
+  max-width: calc(100% - 1px);
+  padding: 15px 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #111111;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main-nav__submenu-link:hover {
+  color: #ec1818;
+}
+.main-nav__bestsellers {
+  flex: 0 0 260px;
+  padding-left: 16px;
+  border-left: 1px solid rgba(204, 204, 204, 0.3);
+}
+.main-nav__bestsellers-title {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 130%;
+}
+.main-nav__bestsellers-card {
+  display: flex;
+  gap: 16px;
+  padding: 8px;
+}
+.main-nav__bestsellers-card-figure img {
+  display: block;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+.main-nav__bestsellers-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main-nav__bestsellers-card-name {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 130%;
+}
+.main-nav__bestsellers-card-amount {
+  color: #219653;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.main-nav__bestsellers-card-price {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
 }
 
 .main-slider {
