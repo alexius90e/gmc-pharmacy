@@ -1,20 +1,27 @@
 .breacrumbs {
   display: flex;
-  gap: 4px;
+  gap: 8px;
   overflow-x: auto;
 
   &__link {
     display: flex;
-    gap: 4px;
+    align-items: center;
+    gap: 8px;
     color: $deepgray;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
+    transition: $baseTransition;
+
+    &:hover {
+      color: $red;
+    }
 
     &::after {
       content: "/";
       display: inline-block;
+      color: $deepgray;
     }
 
     &:last-child::after {

@@ -1,4 +1,6 @@
 .pharmacy-card {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   border-radius: 10px;
 
@@ -39,6 +41,7 @@
   }
 
   &__title {
+    flex: 1 1 auto;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;

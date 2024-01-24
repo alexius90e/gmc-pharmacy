@@ -246,6 +246,8 @@ figure {
 }
 
 .pharmacy-card {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   border-radius: 10px;
 }
@@ -288,6 +290,7 @@ figure {
   }
 }
 .pharmacy-card__title {
+  flex: 1 1 auto;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -638,21 +641,27 @@ figure {
 
 .breacrumbs {
   display: flex;
-  gap: 4px;
+  gap: 8px;
   overflow-x: auto;
 }
 .breacrumbs__link {
   display: flex;
-  gap: 4px;
+  align-items: center;
+  gap: 8px;
   color: #999999;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
+  transition: all ease-in-out 0.15s;
+}
+.breacrumbs__link:hover {
+  color: #ec1818;
 }
 .breacrumbs__link::after {
   content: "/";
   display: inline-block;
+  color: #999999;
 }
 .breacrumbs__link:last-child::after {
   display: none;
@@ -1199,9 +1208,16 @@ figure {
 @media (max-width: 576px) {
   .pharmacies__slider .swiper {
     height: 860px;
+    min-height: -moz-max-content;
+    min-height: max-content;
   }
 }
+.pharmacies__slider .swiper-slide {
+  height: auto;
+}
 .pharmacies__slider .swiper-slide > * {
+  height: 100%;
+  box-sizing: border-box;
   transition: box-shadow ease-in-out 0.2s;
 }
 .pharmacies__slider .swiper-slide > *:hover {
@@ -1226,7 +1242,7 @@ figure {
     height: 40px;
   }
 }
-@media (max-width: 992px) {
+@media screen and (max-width: 1280px) {
   .pharmacies__slider .swiper-button-prev, .pharmacies__slider .swiper-button-next {
     width: 36px;
     height: 36px;
@@ -1248,7 +1264,12 @@ figure {
 }
 @media screen and (max-width: 1440px) {
   .pharmacies__slider .swiper-button-prev {
-    left: 4px;
+    left: -40px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .pharmacies__slider .swiper-button-prev {
+    left: 0px;
   }
 }
 .pharmacies__slider .swiper-button-next {
@@ -1256,7 +1277,12 @@ figure {
 }
 @media screen and (max-width: 1440px) {
   .pharmacies__slider .swiper-button-next {
-    right: 4px;
+    right: -40px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .pharmacies__slider .swiper-button-next {
+    right: 0px;
   }
 }
 @media (max-width: 768px) {
