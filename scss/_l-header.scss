@@ -184,6 +184,7 @@
       display: block;
       padding: 0;
       border: none;
+      background-color: rgba($color: $white, $alpha: 0);
       
 
       @include tablet {
