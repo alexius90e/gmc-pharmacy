@@ -1,0 +1,83 @@
+.catalog {
+  padding: 50px 0;
+  background-color: $lightgray;
+
+  @include tablet {
+  }
+
+  &__filter {
+  }
+
+  &__content {
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include mobile {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 8px;
+    }
+
+    & .pharmacy-card {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 32px;
+      padding: 20px;
+      background-color: $white;
+
+      @include tablet {
+        gap: 10px;
+        padding: 10px;
+      }
+
+      @include mobile {
+        flex: 0 0 calc(100% / 2 - 8px / 2);
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+
+      & > * {
+        flex: 0 0 auto;
+        margin: 0;
+      }
+
+      &__figure {
+        @include tablet {
+          height: auto;
+        }
+
+        &-image {
+          @include tablet {
+            max-width: 148px;
+          }
+
+          @include mobile {
+            max-width: 130px;
+          }
+        }
+      }
+
+      &__properties {
+        @include mobile {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      &__block_text {
+        flex: 1 1 auto;
+
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
