@@ -291,20 +291,28 @@ figure {
 }
 .pharmacy-card__title {
   flex: 1 1 auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin: 0;
+  max-height: 78px;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 26px;
-  margin: 0 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media (max-width: 768px) {
   .pharmacy-card__title {
+    max-height: 69px;
     font-size: 18px;
     line-height: 23px;
   }
 }
 @media (max-width: 576px) {
   .pharmacy-card__title {
+    max-height: 63px;
     font-size: 16px;
     line-height: 21px;
   }
@@ -313,7 +321,7 @@ figure {
   display: flex;
   flex-wrap: wrap;
   gap: 4px 20px;
-  margin: 0 0 32px;
+  margin: 10px 0 32px;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -321,12 +329,12 @@ figure {
 }
 @media (max-width: 768px) {
   .pharmacy-card__info {
-    margin: 0 0 24px;
+    margin: 10px 0 24px;
   }
 }
 @media (max-width: 576px) {
   .pharmacy-card__info {
-    margin: 0 0 16px;
+    margin: 10px 0 16px;
   }
 }
 .pharmacy-card__info-stock {
@@ -660,9 +668,10 @@ figure {
   border: 1px solid #cccccc;
   background: url(../assets/icons/chevron.svg) center no-repeat;
   background-size: 16px;
+  transform: rotate(180deg);
 }
 .accordeon.active .accordeon__toggler::after {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 .accordeon__panel {
   max-height: 0;
@@ -876,7 +885,6 @@ figure {
   display: block;
   padding: 0;
   border: none;
-  background-color: #ffffff;
 }
 @media (max-width: 768px) {
   .header__controls-button {
@@ -887,6 +895,7 @@ figure {
     justify-content: center;
     gap: 6px;
     height: 73px;
+    background-color: #ffffff;
   }
 }
 .header__controls-button::before {
@@ -2126,6 +2135,7 @@ figure {
 .main-nav__submenu-link {
   display: inline-block;
   max-width: calc(100% - 1px);
+  width: 100%;
   padding: 15px 16px;
   box-sizing: border-box;
   overflow: hidden;
@@ -2136,9 +2146,12 @@ figure {
   line-height: 130%;
   text-overflow: ellipsis;
   white-space: nowrap;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: all ease-in-out 0.15s;
 }
 .main-nav__submenu-link:hover {
-  color: #ec1818;
+  background-color: #f6f6f6;
 }
 .main-nav__bestsellers {
   flex: 0 0 260px;
@@ -2156,6 +2169,16 @@ figure {
   display: flex;
   gap: 16px;
   padding: 8px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+.main-nav__bestsellers-card:hover {
+  background-color: #f6f6f6;
+}
+.main-nav__bestsellers-card-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .main-nav__bestsellers-card-figure img {
   display: block;
@@ -2198,7 +2221,19 @@ figure {
     padding: 16px;
   }
 }
+.main-slider__controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
+  width: 100%;
+  transform: translateX(-50%) translateY(-50%);
+}
 .main-slider .swiper-button-prev, .main-slider .swiper-button-next {
+  position: static;
   display: block;
   width: 48px;
   height: 48px;
@@ -2209,6 +2244,7 @@ figure {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px;
+  backdrop-filter: blur(5px);
   transition: all ease-in-out 0.15s;
 }
 @media (max-width: 1200px) {
@@ -2239,20 +2275,19 @@ figure {
   display: none;
 }
 .main-slider .swiper-button-prev {
-  left: calc((100% - 1170px) / 2 - 40px);
-  transform: rotate(180deg);
+  transform: translateX(-50%) rotate(180deg);
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1260px) {
   .main-slider .swiper-button-prev {
-    left: 20px;
+    transform: translateX(6px) rotate(180deg);
   }
 }
 .main-slider .swiper-button-next {
-  right: calc((100% - 1170px) / 2 - 40px);
+  transform: translateX(50%);
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1260px) {
   .main-slider .swiper-button-next {
-    right: 20px;
+    transform: translateX(-6px);
   }
 }
 .main-slider .swiper-pagination-bullets {
@@ -2288,7 +2323,7 @@ figure {
   padding: 24px 54px;
   box-sizing: border-box;
   border-radius: 24px;
-  border: 1px solid #cccccc;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 1200px) {
   .main-slider__slide {
@@ -2823,9 +2858,10 @@ figure {
   line-height: 130%;
   white-space: nowrap;
   text-overflow: ellipsis;
+  border-radius: 8px;
 }
 .catalog-top__categories-link:hover {
-  color: #ec1818;
+  background-color: #f6f6f6;
 }
 @media (max-width: 768px) {
   .catalog-top__categories-link {
@@ -2872,16 +2908,16 @@ figure {
   line-height: 130%;
   text-transform: uppercase;
   border: none;
+  border-radius: 4px;
   background-color: #ffffff;
   transition: all ease-in 0.1s;
   cursor: pointer;
 }
 .catalog-top__sorting-button:hover {
-  color: #ffffff;
-  background-color: #111111;
+  background-color: #f6f6f6;
 }
 .catalog-top__sorting-button:active {
-  background-color: #ec1818;
+  background-color: #cccccc;
 }
 @media (max-width: 992px) {
   .catalog-top__sorting-button {
@@ -2894,6 +2930,11 @@ figure {
 .catalog {
   padding: 50px 0;
   background-color: #f6f6f6;
+}
+@media (max-width: 768px) {
+  .catalog {
+    padding: 32px 0;
+  }
 }
 .catalog__cards {
   display: flex;

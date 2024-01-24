@@ -184,7 +184,7 @@
       display: block;
       padding: 0;
       border: none;
-      background-color: $white;
+      
 
       @include tablet {
         flex: 0 1 calc(100% / 6);
@@ -194,6 +194,7 @@
         justify-content: center;
         gap: 6px;
         height: 73px;
+        background-color: $white;
       }
 
       &::before {

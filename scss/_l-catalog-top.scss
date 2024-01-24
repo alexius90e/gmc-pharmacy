@@ -47,9 +47,10 @@
       line-height: 130%;
       white-space: nowrap;
       text-overflow: ellipsis;
+      border-radius: 8px;
 
       &:hover {
-        color: $red;
+        background-color: $lightgray;
       }
 
       @include tablet {
@@ -96,18 +97,17 @@
       line-height: 130%;
       text-transform: uppercase;
       border: none;
+      border-radius: 4px;
       background-color: $white;
       transition: all ease-in 0.1s;
       cursor: pointer;
 
       &:hover {
-        color: $white;
-        background-color: $black;
+        background-color: $lightgray;
       }
 
-
       &:active {
-        background-color: $red;
+        background-color: $gray;
       }
 
       @include laptop {
