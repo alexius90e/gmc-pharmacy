@@ -183,11 +183,13 @@
 
                   <div class="main-nav__bestsellers-card">
                     <figure class="main-nav__bestsellers-card-figure">
-                      <img src="./assets/pharmacy/pharmacy-1.png" alt="pharmacy">
+                      <img src="./assets/pharmacy/pharmacy-1.png" alt="pharmacy" />
                     </figure>
 
                     <div class="main-nav__bestsellers-card-info">
-                      <div class="main-nav__bestsellers-card-name">Темозоломид капсулы 180мг 5шт</div>
+                      <div class="main-nav__bestsellers-card-name">
+                        Темозоломид капсулы 180мг 5шт
+                      </div>
                       <div class="main-nav__bestsellers-card-amount">В наличии</div>
                       <div class="main-nav__bestsellers-card-price">7 062 ₽</div>
                     </div>
@@ -195,11 +197,13 @@
 
                   <div class="main-nav__bestsellers-card">
                     <figure class="main-nav__bestsellers-card-figure">
-                      <img src="./assets/pharmacy/pharmacy-2.png" alt="pharmacy">
+                      <img src="./assets/pharmacy/pharmacy-2.png" alt="pharmacy" />
                     </figure>
 
                     <div class="main-nav__bestsellers-card-info">
-                      <div class="main-nav__bestsellers-card-name">Темозоломид капсулы 180мг 5шт</div>
+                      <div class="main-nav__bestsellers-card-name">
+                        Темозоломид капсулы 180мг 5шт
+                      </div>
                       <div class="main-nav__bestsellers-card-amount">В наличии</div>
                       <div class="main-nav__bestsellers-card-price">7 062 ₽</div>
                     </div>
@@ -207,11 +211,13 @@
 
                   <div class="main-nav__bestsellers-card">
                     <figure class="main-nav__bestsellers-card-figure">
-                      <img src="./assets/pharmacy/pharmacy-3.png" alt="pharmacy">
+                      <img src="./assets/pharmacy/pharmacy-3.png" alt="pharmacy" />
                     </figure>
 
                     <div class="main-nav__bestsellers-card-info">
-                      <div class="main-nav__bestsellers-card-name">Темозоломид капсулы 180мг 5шт</div>
+                      <div class="main-nav__bestsellers-card-name">
+                        Темозоломид капсулы 180мг 5шт
+                      </div>
                       <div class="main-nav__bestsellers-card-amount">В наличии</div>
                       <div class="main-nav__bestsellers-card-price">7 062 ₽</div>
                     </div>
@@ -2478,5 +2484,141 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal modal-auth close">
+      <div class="modal__content">
+        <div class="modal__body">
+          <div class="modal__header">
+            <h4 class="modal__title">Авторизация</h4>
+            <button class="modal__button modal__button_close close"></button>
+          </div>
+
+          <div class="modal-auth__buttons">
+            <button class="button modal-auth__button modal-auth__button_account modal__button_login">
+              Войти в аккаунт
+            </button>
+            <span class="modal-auth__divider">или с помощью</span>
+            <button class="button modal-auth__button modal-auth__button_yandex">Войти с яндекс ID</button>
+            <button class="button modal-auth__button modal-auth__button_tinkoff">Tikkoff ID</button>
+            <button class="button modal-auth__button modal-auth__button_sber">СБЕР ID</button>
+            <button class="button modal-auth__button modal-auth__button_vk">VK ID</button>
+          </div>
+
+          <div class="modal__footer">
+            <button class="modal__footer-button modal__button_sign-in">
+              Регистрация новых пользователей
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-sign-in close">
+      <div class="modal__content">
+        <div class="modal__body">
+          <div class="modal__header">
+            <button class="modal__button modal__button_back modal__button_auth">назад</button>
+            <button class="modal__button modal__button_close close"></button>
+          </div>
+
+          <h4 class="modal__title">Регистрация</h4>
+
+          <form class="modal__form">
+            <label class="modal__form-label">
+              <span class="modal__form-label-text">ФИО</span>
+              <input class="modal__form-input" type="text" placeholder="Егор Николаевич" />
+            </label>
+
+            <label class="modal__form-label">
+              <span class="modal__form-label-text">Телефон</span>
+              <input class="modal__form-input" type="tel" placeholder="+7" />
+            </label>
+
+            <label class="modal__form-label">
+              <span class="modal__form-label-text">Email для уведомления о статусе заказа</span>
+              <input class="modal__form-input" type="email" placeholder="ivanov@gmail.com" />
+            </label>
+
+            <label class="modal__form-label modal__form-label_checkbox">
+              <input class="modal__form-checkbox" type="checkbox" />
+              <span class="modal__form-label-checkmark"></span>
+              <span class="modal__form-label-text">
+                Согласен на <a href="#">обработку персональных данных</a>
+              </span>
+            </label>
+
+            <button class="button">Зарегистрироваться</button>
+          </form>
+
+          <div class="modal__disclaimer">
+            Нажимая кнопку «Зарегистрироваться», я даю согласие на обработку персональных данных и
+            соглашаюсь с <a href="#">Политикой обработки персональных данных</a> и
+            <a href="#">Пользовательским соглашением</a>
+          </div>
+
+          <div class="modal__footer">
+            <span>Уже есть аккаунт? </span>
+            <button class="modal__footer-button modal__button_login">Войти</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-login close">
+      <div class="modal__content">
+        <div class="modal__body">
+          <div class="modal__header">
+            <button class="modal__button modal__button_back modal__button_auth">назад</button>
+            <button class="modal__button modal__button_close close"></button>
+          </div>
+
+          <h4 class="modal__title">Вход в аккаунт</h4>
+
+          <form class="modal__form">
+            <label class="modal__form-label">
+              <span class="modal__form-label-text">Телефон</span>
+              <input class="modal__form-input" type="tel" placeholder="+7" />
+            </label>
+
+            <label class="modal__form-label">
+              <span class="modal__form-label-text">Введите пароль</span>
+              <input class="modal__form-input" type="text" placeholder="Ваш пароль" />
+            </label>
+
+            <button class="button">Войти</button>
+          </form>
+
+          <div class="modal__footer">
+            <button class="modal__footer-button modal__button_reset-password">
+              Забыли пароль ?
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-reset-password close">
+      <div class="modal__content">
+        <div class="modal__body">
+          <div class="modal__header">
+            <button class="modal__button modal__button_back modal__button_login">назад</button>
+            <button class="modal__button modal__button_close close"></button>
+          </div>
+
+          <h4 class="modal__title">Восстановление пароля</h4>
+
+          <div>Введите ваш номер телефона, который использовался при регистрации в Ютеке</div>
+
+          <form class="modal__form">
+            <label class="modal__form-label">
+              <span class="modal__form-label-text">Телефон</span>
+              <input class="modal__form-input" type="tel" placeholder="+7" />
+            </label>
+
+            <button class="button">Востановить пароль</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

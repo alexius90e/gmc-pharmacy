@@ -1,0 +1,126 @@
+.modal-auth {
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    max-width: none;
+    height: 48px;
+    padding: 4px 24px;
+    font-size: 13px;
+    line-height: 13px;
+
+    &:hover {
+      background-color: #cc0a0a;
+    }
+
+    &:active {
+      background-color: #ff0000;
+    }
+
+    &::before {
+      content: '';
+      display: none;
+      height: 24px;
+      width: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 24px;
+    }
+
+    &_yandex {
+      background-color: $black;
+
+      &:hover {
+        background-color: #333333;
+      }
+
+      &:active {
+        background-color: #666666;
+      }
+
+      &::before {
+        display: block;
+        background-image: url(../assets/icons/yandex-id.svg);
+      }
+    }
+
+    &_tinkoff {
+      color: $black;
+      background-color: #ffda34;
+
+      &:hover {
+        background-color: #ffd000;
+      }
+
+      &:active {
+        background-color: #ffde4d;
+      }
+
+      &::before {
+        display: block;
+        background-image: url(../assets/icons/tinkoff-id.svg);
+      }
+    }
+
+    &_sber {
+      background-color: #21A038;
+
+      &:hover {
+        background-color: #1c8830;
+      }
+
+      &:active {
+        background-color: #19792a;
+      }
+
+      &::before {
+        display: block;
+        background-image: url(../assets/icons/sber-id.svg);
+      }
+    }
+
+    &_vk {
+      background-color: #2787F5;
+
+      &:hover {
+        background-color: #247ce0;
+      }
+
+      &:active {
+        background-color: #206bc2;
+      }
+
+      &::before {
+        display: block;
+        background-image: url(../assets/icons/vk-id.svg);
+      }
+    }
+  }
+
+  &__divider {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: $deepgray;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1 1 auto;
+      display: block;
+      height: 1px;
+      background-color: $gray;
+    }
+  }
+}

@@ -39,6 +39,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: #ffffff;
 }
 
 * {
@@ -637,6 +638,7 @@ figure {
 
 .header {
   position: relative;
+  background-color: #ffffff;
 }
 .header__top {
   padding: 6px 0;
@@ -962,6 +964,13 @@ figure {
   }
 }
 
+.main {
+  background-color: #ffffff;
+}
+
+.footer {
+  background-color: #ffffff;
+}
 .footer__main {
   padding: 40px 0 50px;
   background-color: #f6f6f6;
@@ -2410,4 +2419,274 @@ figure {
   .main-slider__slide-disclaimer {
     font-size: 12px;
   }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(17, 17, 17, 0.5);
+}
+.modal.active {
+  z-index: 500;
+}
+.modal a {
+  color: #ec1818;
+  transition: all ease-in-out 0.15s;
+}
+.modal a:hover {
+  color: #111111;
+}
+.modal__content {
+  max-height: calc(100vh - 32px);
+  max-width: calc(100vw - 32px);
+  width: 370px;
+  padding: 24px;
+  overflow: auto;
+  box-sizing: border-box;
+  border-radius: 24px;
+  background-color: #ffffff;
+  transform: translateY(-200vh);
+  transition: transform ease-in-out 0.2s;
+  will-change: transform;
+}
+.modal__content::-webkit-scrollbar {
+  width: 4px;
+}
+.modal.active .modal__content {
+  transform: translateY(0);
+}
+.modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.modal__button {
+  cursor: pointer;
+}
+.modal__button_back {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #777777;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  text-transform: uppercase;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+.modal__button_back:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: url(../assets/icons/next-button.svg) center no-repeat;
+  transform: rotate(180deg);
+  opacity: 0.6;
+}
+.modal__button_close {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: url(../assets/icons/close.svg) center no-repeat;
+}
+.modal__title {
+  margin: 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.modal__form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.modal__form-label_checkbox {
+  position: relative;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.modal__form-label_checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.modal__form-label_checkbox .modal__form-label-checkmark {
+  flex: 0 0 auto;
+  display: block;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 2px solid #ec1818;
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.modal__form-label_checkbox input:checked ~ .modal__form-label-checkmark {
+  border: none;
+  background: url(../assets/icons/checkbox-checked.svg) center no-repeat;
+  background-size: cover;
+}
+.modal__form-label-text {
+  color: #999999;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.modal__form-input {
+  display: inline-block;
+  padding: 13px 18px 9px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  border-radius: 5px;
+  border: 2px solid #cccccc;
+  background-color: #ffffff;
+  outline-color: rgba(33, 150, 83, 0.2);
+}
+.modal__form .button {
+  max-width: none;
+}
+.modal__footer {
+  text-align: center;
+}
+.modal__footer-button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.modal-auth__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.modal-auth__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  max-width: none;
+  height: 48px;
+  padding: 4px 24px;
+  font-size: 13px;
+  line-height: 13px;
+}
+.modal-auth__button:hover {
+  background-color: #cc0a0a;
+}
+.modal-auth__button:active {
+  background-color: #ff0000;
+}
+.modal-auth__button::before {
+  content: "";
+  display: none;
+  height: 24px;
+  width: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+}
+.modal-auth__button_yandex {
+  background-color: #111111;
+}
+.modal-auth__button_yandex:hover {
+  background-color: #333333;
+}
+.modal-auth__button_yandex:active {
+  background-color: #666666;
+}
+.modal-auth__button_yandex::before {
+  display: block;
+  background-image: url(../assets/icons/yandex-id.svg);
+}
+.modal-auth__button_tinkoff {
+  color: #111111;
+  background-color: #ffda34;
+}
+.modal-auth__button_tinkoff:hover {
+  background-color: #ffd000;
+}
+.modal-auth__button_tinkoff:active {
+  background-color: #ffde4d;
+}
+.modal-auth__button_tinkoff::before {
+  display: block;
+  background-image: url(../assets/icons/tinkoff-id.svg);
+}
+.modal-auth__button_sber {
+  background-color: #21A038;
+}
+.modal-auth__button_sber:hover {
+  background-color: #1c8830;
+}
+.modal-auth__button_sber:active {
+  background-color: #19792a;
+}
+.modal-auth__button_sber::before {
+  display: block;
+  background-image: url(../assets/icons/sber-id.svg);
+}
+.modal-auth__button_vk {
+  background-color: #2787F5;
+}
+.modal-auth__button_vk:hover {
+  background-color: #247ce0;
+}
+.modal-auth__button_vk:active {
+  background-color: #206bc2;
+}
+.modal-auth__button_vk::before {
+  display: block;
+  background-image: url(../assets/icons/vk-id.svg);
+}
+.modal-auth__divider {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #999999;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
+.modal-auth__divider::before, .modal-auth__divider::after {
+  content: "";
+  flex: 1 1 auto;
+  display: block;
+  height: 1px;
+  background-color: #cccccc;
 }

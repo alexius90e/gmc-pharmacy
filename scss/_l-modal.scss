@@ -1,0 +1,191 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: $black, $alpha: 0.5);
+
+  &.active {
+    z-index: 500;
+  }
+
+  & a {
+    color: $red;
+    transition: $baseTransition;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  &__content {
+    max-height: calc(100vh - 32px);
+    max-width: calc(100vw - 32px);
+    width: 370px;
+    padding: 24px;
+    overflow: auto;
+    box-sizing: border-box;
+    border-radius: 24px;
+    background-color: $white;
+    transform:  translateY(-200vh);
+    transition:  transform ease-in-out 0.2s;
+    will-change: transform;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+  }
+
+  &.active &__content{
+    transform:  translateY(0);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+    overflow: hidden;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__button {
+    cursor: pointer;
+
+    &_back {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: $darkgray;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 550;
+      line-height: normal;
+      text-transform: uppercase;
+      border: none;
+      background-color: rgba($color: $white, $alpha: 0);
+
+      &:before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: none;
+        background: url(../assets/icons/next-button.svg) center no-repeat;
+        transform: rotate(180deg);
+        opacity: 0.6;
+      }
+    }
+
+    &_close {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border: none;
+      background: url(../assets/icons/close.svg) center no-repeat;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &-label {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+
+      &_checkbox {
+        position: relative;
+        flex-direction: row;
+        align-items: flex-start;
+
+        & input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+      }
+
+      &_checkbox &-checkmark {
+        flex: 0 0 auto;
+        display: block;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        border: 2px solid $red;
+        border-radius: 3px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      &_checkbox input:checked ~ &-checkmark {
+        border: none;
+        background: url(../assets/icons/checkbox-checked.svg) center no-repeat;
+        background-size: cover;
+      }
+
+      &-text {
+        color: $deepgray;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+      }
+    }
+
+    &-input {
+      display: inline-block;
+      padding: 13px 18px 9px;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      border-radius: 5px;
+      border: 2px solid $gray;
+      background-color: $white;
+      outline-color: rgba($color: $green, $alpha: 0.2);
+    }
+
+    & .button {
+      max-width: none;
+    }
+  }
+
+  &__footer {
+    text-align: center;
+
+    &-button {
+      padding: 0;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+  }
+}
