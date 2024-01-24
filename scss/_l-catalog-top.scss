@@ -1,0 +1,120 @@
+.catalog-top {
+  padding: 16px 0 32px;
+
+  &__title {
+    max-width: none;
+    margin: 24px 0;
+    text-align: left;
+  }
+
+  &__result {
+    margin: 24px 0;
+    color: $darkgray;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    & a {
+      color: $black;
+    }
+  }
+
+  &__categories {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 24px 0;
+
+    @include mobile {
+      gap: 2px;
+    }
+
+    &-link {
+      flex: 1 1 20%;
+      display: inline-block;
+      max-width: 268px;
+      padding: 15px 16px;
+      overflow: hidden;
+      color: $black;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      &:hover {
+        color: $red;
+      }
+
+      @include tablet {
+        padding: 8px;
+        font-size: 12px;
+      }
+
+      @include mobile {
+        flex: 1 1 30%;
+        padding: 6px;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 24px 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__sorting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include desktop {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    &-button {
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+      text-transform: uppercase;
+      border: none;
+      background-color: $white;
+      transition: all ease-in 0.1s;
+      cursor: pointer;
+
+      &:hover {
+        color: $white;
+        background-color: $black;
+      }
+
+
+      &:active {
+        background-color: $red;
+      }
+
+      @include laptop {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+      }
+    }
+  }
+}
