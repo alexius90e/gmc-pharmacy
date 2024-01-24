@@ -11,8 +11,11 @@
       margin: -16px;
 
       @include mobile {
-        height: 860px;
-        min-height: max-content;
+        height: 920px;
+      }
+
+      @media screen and (max-width: 400px) {
+        height: 1000px;
       }
 
       &-slide {

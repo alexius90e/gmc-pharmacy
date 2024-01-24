@@ -1207,9 +1207,12 @@ figure {
 }
 @media (max-width: 576px) {
   .pharmacies__slider .swiper {
-    height: 860px;
-    min-height: -moz-max-content;
-    min-height: max-content;
+    height: 920px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .pharmacies__slider .swiper {
+    height: 1000px;
   }
 }
 .pharmacies__slider .swiper-slide {
