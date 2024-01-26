@@ -21,14 +21,14 @@
       bottom: 0;
       z-index: 1001;
       max-width: 300px;
-      padding: 16px;
+      padding: 48px 16px 16px;
       box-sizing: border-box;
       overflow: auto;
       background-color: $white;
       transform: translateX(-120%);
       transition: $baseTransition;
     }
-    
+
     &.active {
       @include laptop {
         transform: translateX(0);
@@ -76,6 +76,21 @@
         }
       }
     }
+
+    &-close {
+      display: none;
+
+      @include laptop {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border: none;
+        background: url(../assets/icons/close.svg) center no-repeat;
+      }
+    }
   }
 
   &__content {
@@ -96,13 +111,20 @@
     &-sorting {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
       gap: 30px;
       padding-left: 16px;
 
       @include mobile {
         gap: 20px;
         padding: 0;
+      }
+
+      & .custom-select {
+        @include mobile {
+          flex: 1 0 auto;
+          max-width: 124px;
+          width: 100%;
+        }
       }
     }
 
@@ -141,7 +163,7 @@
         }
 
         &.active::after {
-          content: '';
+          content: "";
           position: fixed;
           top: 0;
           left: 0;
@@ -150,6 +172,12 @@
           z-index: 1000;
           display: block;
           background-color: rgba($color: $black, $alpha: 0.5);
+        }
+
+        & span {
+          @include mobile {
+            display: none;
+          }
         }
       }
     }

@@ -27,7 +27,8 @@
 
     @include mobile {
       gap: 8px;
-      width: 140px;
+      max-width: 130px;
+      width: 100%;
       font-size: 14px;
     }
 

@@ -43,11 +43,18 @@ catalogFilterCheckboxes.forEach((catalogFilterCheckboxElem) => {
 });
 
 const catalogControlsFilterButton = document.querySelector(".catalog__controls-filter-button");
+const catalogFilter = document.querySelector(".catalog__filter");
 
-if (catalogControlsFilterButton) {
+if (catalogControlsFilterButton && catalogFilter) {
   catalogControlsFilterButton.addEventListener("click", (event) => {
     event.currentTarget.classList.toggle("active");
-    const catalogFilter = document.querySelector(".catalog__filter");
-    if (catalogFilter) catalogFilter.classList.toggle("active");
+    catalogFilter.classList.toggle("active");
+  });
+
+  catalogFilter.addEventListener("click", (event) => {
+    if (event.target.classList.contains("close")) {
+      event.currentTarget.classList.remove("active");
+      catalogControlsFilterButton.classList.remove("active");
+    }
   });
 }
