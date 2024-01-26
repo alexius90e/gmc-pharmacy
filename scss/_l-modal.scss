@@ -179,10 +179,12 @@
   }
 
   &__footer {
+    color: $black;
     text-align: center;
 
     &-button {
       padding: 0;
+      color: $black;
       border: none;
       background: none;
       cursor: pointer;

@@ -1297,6 +1297,7 @@ figure {
 }
 .header__controls-button-text {
   display: none;
+  color: #111111;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -3136,10 +3137,12 @@ figure {
   max-width: none;
 }
 .modal__footer {
+  color: #111111;
   text-align: center;
 }
 .modal__footer-button {
   padding: 0;
+  color: #111111;
   border: none;
   background: none;
   cursor: pointer;
@@ -3339,6 +3342,7 @@ figure {
   padding: 0;
   width: 40px;
   height: 40px;
+  color: #111111;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
