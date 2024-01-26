@@ -349,7 +349,236 @@
 
       <section class="catalog">
         <div class="container">
-          <aside class="catalog__filter"></aside>
+          <aside class="catalog__filter">
+            <div class="catalog__filter-title">Диапазон цен, ₽</div>
+            <div class="double-range-slider">
+              <div class="double-range-slider__inputs">
+                <input
+                  class="double-range-slider__input double-range-slider__input_lower"
+                  type="range"
+                  min="0"
+                  max="100000"
+                  value="10000"
+                  step="100"
+                />
+                <input
+                  class="double-range-slider__input double-range-slider__input_upper"
+                  type="range"
+                  min="0"
+                  max="100000"
+                  value="90000"
+                  step="100"
+                />
+              </div>
+
+              <div class="double-range-slider__labels">
+                <input
+                  class="double-range-slider__label double-range-slider__label_lower"
+                  type="number"
+                  placeholder="From"
+                  min="0"
+                  max="100000"
+                  step="100"
+                  name="minPrice"
+                  value="10000"
+                />
+                <input
+                  class="double-range-slider__label double-range-slider__label_upper"
+                  type="number"
+                  placeholder="To"
+                  min="0"
+                  max="100000"
+                  step="100"
+                  name="maxPrice"
+                  value="90000"
+                />
+              </div>
+            </div>
+
+            <div class="catalog__filter-title">Производитель</div>
+            <div class="catalog__filter-checkboxes">
+              <div class="catalog__filter-checkboxes-wrap">
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" checked />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text"> AstraZeneca Pharmaceuticals Pharmaceuticalss</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Baxter Oncology GmbH</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Ebewe</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">AstraZeneca Pharmaceuticals</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Baxter Oncology GmbH</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" checked/>
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Ebewe</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">AstraZeneca Pharmaceuticals</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Baxter Oncology GmbH</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Ebewe</span>
+                </label>
+
+              </div>
+              <div class="catalog__filter-checkboxes-toggler">Посмотреть все</div>
+            </div>
+
+            <div class="catalog__filter-title">Лекарственная форма</div>
+            <div class="catalog__filter-checkboxes">
+              <div class="catalog__filter-checkboxes-wrap">
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" checked />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text"> AstraZeneca Pharmaceuticals Pharmaceuticalss</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Baxter Oncology GmbH</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Ebewe</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">AstraZeneca Pharmaceuticals</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Baxter Oncology GmbH</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" checked/>
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Ebewe</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">AstraZeneca Pharmaceuticals</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Baxter Oncology GmbH</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Ebewe</span>
+                </label>
+
+              </div>
+              <div class="catalog__filter-checkboxes-toggler">Посмотреть все</div>
+            </div>
+
+            <div class="catalog__filter-title">Действующее вещество</div>
+            <div class="catalog__filter-checkboxes">
+              <div class="catalog__filter-checkboxes-wrap">
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" checked />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text"> AstraZeneca Pharmaceuticals Pharmaceuticalss</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Baxter Oncology GmbH</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Ebewe</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">AstraZeneca Pharmaceuticals</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Baxter Oncology GmbH</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" checked/>
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Ebewe</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">AstraZeneca Pharmaceuticals</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Baxter Oncology GmbH</span>
+                </label>
+
+                <label class="custom-checkbox">
+                  <input class="custom-checkbox__input" type="checkbox" />
+                  <span class="custom-checkbox__checkmark"></span>
+                  <span class="custom-checkbox__text">Ebewe</span>
+                </label>
+
+              </div>
+              <div class="catalog__filter-checkboxes-toggler">Посмотреть все</div>
+            </div>
+          </aside>
+
           <div class="catalog__content">
             <div class="catalog__controls">
               <div class="catalog__controls-sorting">
@@ -370,7 +599,6 @@
                     <option value="4">Показать по 60</option>
                   </select>
                 </div>
-
               </div>
 
               <div class="catalog__controls-view">

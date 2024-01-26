@@ -13,10 +13,47 @@
 
   &__filter {
     flex: 0 0 270px;
-    background-color: $white;
 
     @include laptop {
       display: none;
+    }
+
+    &-title {
+      margin: 40px 0 24px;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+
+      @include laptop {
+        margin: 24px 0 20px;
+        font-size: 16px;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &-checkboxes {
+      &-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-height: calc(36px * 7);
+        margin-bottom: 16px;
+        overflow: hidden;
+      }
+
+      &-toggler {
+        color: $red;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        text-decoration-line: underline;
+        cursor: pointer;
+      }
     }
   }
 
@@ -35,12 +72,21 @@
       align-items: center;
       gap: 30px;
       padding-left: 16px;
+
+      @include mobile {
+        gap: 20px;
+        padding: 0;
+      }
     }
 
     &-view {
       display: flex;
       align-items: center;
       gap: 15px;
+
+      @include mobile {
+        display: none;
+      }
 
       &-button {
         display: inline-block;
@@ -131,11 +177,8 @@
 
       &__block_text {
         flex: 1 1 auto;
-
-        @include mobile {
-          display: flex;
-          flex-direction: column;
-        }
+        display: flex;
+        flex-direction: column;
       }
     }
 

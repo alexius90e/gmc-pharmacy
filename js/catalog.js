@@ -24,3 +24,18 @@ catalogViewButtons.forEach((button) => {
     }
   });
 });
+
+const catalogFilterCheckboxes = document.querySelectorAll(".catalog__filter-checkboxes");
+
+catalogFilterCheckboxes.forEach((catalogFilterCheckboxElem) => {
+  catalogFilterCheckboxElem.addEventListener("click", (event) => {
+    const isToggler = event.target.classList.contains("catalog__filter-checkboxes-toggler");
+    if (!isToggler) return;
+    const wrapper = event.currentTarget.querySelector(".catalog__filter-checkboxes-wrap");
+    if (wrapper.style.maxHeight) {
+      wrapper.style.maxHeight = null;
+    } else {
+      wrapper.style.maxHeight = wrapper.scrollHeight + 240 + "px";
+    }
+  });
+});
