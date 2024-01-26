@@ -2302,11 +2302,6 @@ figure {
   transition: filter ease-in-out 0.2;
   cursor: pointer;
 }
-@media (max-width: 768px) {
-  .pharmacies-menu__card {
-    padding: 16px;
-  }
-}
 .pharmacies-menu__card:hover {
   filter: brightness(0.8);
 }
@@ -2318,6 +2313,11 @@ figure {
   height: 100%;
   padding: 24px;
   box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .pharmacies-menu__card-link {
+    padding: 16px;
+  }
 }
 .pharmacies-menu__card-link > * {
   position: relative;
