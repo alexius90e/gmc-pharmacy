@@ -37,6 +37,13 @@
       color: $deepgray;
       border-radius: 50px;
       border: 1px solid $gray;
+      transition: $baseTransition;
+      cursor: pointer;
+
+      &:hover {
+        color: $black;
+        border-color: $black;
+      }
 
       &::before {
         content: "";
@@ -44,6 +51,11 @@
         height: 16px;
         width: 16px;
         background: url(../assets/icons/location-gray.svg) center no-repeat;
+        transition: $baseTransition;
+      }
+
+      &:hover {
+        filter: brightness(0.5);
       }
     }
 
@@ -66,6 +78,11 @@
       &-item {
         &-link {
           color: $deepgray;
+          transition: $baseTransition;
+
+          &:hover {
+            color: $black;
+          }
         }
       }
     }
@@ -298,7 +315,7 @@
 
       &_burger.active::after {
         @include tablet {
-          content: '';
+          content: "";
           position: fixed;
           top: 0;
           left: 0;
