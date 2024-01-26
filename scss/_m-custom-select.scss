@@ -11,22 +11,36 @@
   & .select-selected {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 16px;
+    width: 170px;
     padding: 0;
+    box-sizing: border-box;
     color: $black;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
     user-select: none;
     cursor: pointer;
 
     @include mobile {
       gap: 8px;
+      width: 140px;
       font-size: 14px;
+    }
+
+    & > span {
+      display: inline-block;
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @include mobile {
+        max-width: 115px;
+      }
     }
 
     &::after {

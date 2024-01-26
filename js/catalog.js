@@ -34,8 +34,10 @@ catalogFilterCheckboxes.forEach((catalogFilterCheckboxElem) => {
     const wrapper = event.currentTarget.querySelector(".catalog__filter-checkboxes-wrap");
     if (wrapper.style.maxHeight) {
       wrapper.style.maxHeight = null;
+      event.target.innerText = "Посмотреть все";
     } else {
       wrapper.style.maxHeight = wrapper.scrollHeight + 240 + "px";
+      event.target.innerText = "Скрыть все";
     }
   });
 });
@@ -46,6 +48,6 @@ if (catalogControlsFilterButton) {
   catalogControlsFilterButton.addEventListener("click", (event) => {
     event.currentTarget.classList.toggle("active");
     const catalogFilter = document.querySelector(".catalog__filter");
-    if (catalogFilter) catalogFilter.classList.toggle('active')
+    if (catalogFilter) catalogFilter.classList.toggle("active");
   });
 }

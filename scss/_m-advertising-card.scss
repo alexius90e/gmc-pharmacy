@@ -82,6 +82,7 @@
 
     @include mobile {
       font-size: 12px;
+      max-width: calc(100% - 42px);
     }
   }
 

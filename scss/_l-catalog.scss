@@ -21,7 +21,6 @@
       bottom: 0;
       z-index: 1001;
       max-width: 300px;
-      height: 100vh;
       padding: 16px;
       box-sizing: border-box;
       overflow: auto;
@@ -87,6 +86,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
     margin-bottom: 16px;
 
     @include mobile {
@@ -117,14 +117,13 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        padding: 4px 12px;
+        padding: 0;
         color: $black;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 130%;
-        border: 2px solid $gray;
-        border-radius: 6px;
+        border: none;
         background: none;
         cursor: pointer;
 

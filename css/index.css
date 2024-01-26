@@ -47,6 +47,7 @@ body {
 }
 
 a {
+  color: #111111;
   text-decoration: none;
 }
 
@@ -564,6 +565,7 @@ figure {
 @media (max-width: 576px) {
   .advertising-card-title {
     font-size: 12px;
+    max-width: calc(100% - 42px);
   }
 }
 .advertising-card-price {
@@ -722,16 +724,16 @@ figure {
 .custom-select .select-selected {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 16px;
+  width: 170px;
   padding: 0;
+  box-sizing: border-box;
   color: #111111;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   -moz-user-select: none;
    -ms-user-select: none;
        user-select: none;
@@ -740,7 +742,20 @@ figure {
 @media (max-width: 576px) {
   .custom-select .select-selected {
     gap: 8px;
+    width: 140px;
     font-size: 14px;
+  }
+}
+.custom-select .select-selected > span {
+  display: inline-block;
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 576px) {
+  .custom-select .select-selected > span {
+    max-width: 115px;
   }
 }
 .custom-select .select-selected::after {
@@ -1334,6 +1349,11 @@ figure {
 
 .footer {
   background-color: #ffffff;
+}
+@media (max-width: 768px) {
+  .footer {
+    margin-bottom: 73px;
+  }
 }
 .footer__main {
   padding: 40px 0 50px;
@@ -2100,6 +2120,7 @@ figure {
   }
 }
 .faq__buttons .button {
+  flex: 0 0 auto;
   max-width: none;
   text-wrap: nowrap;
 }
@@ -3242,7 +3263,6 @@ figure {
     bottom: 0;
     z-index: 1001;
     max-width: 300px;
-    height: 100vh;
     padding: 16px;
     box-sizing: border-box;
     overflow: auto;
@@ -3301,6 +3321,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   margin-bottom: 16px;
 }
 @media (max-width: 576px) {
@@ -3333,14 +3354,13 @@ figure {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 4px 12px;
+  padding: 0;
   color: #111111;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
-  border: 2px solid #cccccc;
-  border-radius: 6px;
+  border: none;
   background: none;
   cursor: pointer;
 }
