@@ -1,15 +1,12 @@
-
 .advertising-card {
-  position: relative;
   flex: 0 0 calc(100% / 4 - 10px * 3 / 4);
-  display: flex;
-  flex-direction: column;
   max-width: 284px;
   height: 300px;
-  padding: 16px 16px 11px;
-  border-radius: 16px;
+  overflow: hidden;
   box-sizing: border-box;
-  color: $white;
+  border-radius: 16px;
+  transition: filter ease-in-out 0.2s;
+  cursor: pointer;
 
   @include laptop {
     flex: 0 0 calc(100% / 2 - 10px / 2);
@@ -18,7 +15,10 @@
 
   @include tablet {
     height: 180px;
-    padding: 10px 10px 6px;
+  }
+
+  &:hover {
+    filter: brightness(0.8);
   }
 
   &_accent-1 {
@@ -37,9 +37,25 @@
     background: linear-gradient(326deg, #0e2a89 -23.09%, #dd0d13 75.26%);
   }
 
-  & * {
+  &-link {
     position: relative;
-    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 16px 16px 11px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    color: $white;
+
+    @include tablet {
+      padding: 10px 10px 6px;
+    }
+
+    & * {
+      position: relative;
+      z-index: 2;
+    }
   }
 
   &-figure {
