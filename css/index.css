@@ -874,6 +874,11 @@ figure {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+@media (max-width: 992px) {
+  .custom-checkbox__text {
+    font-size: 14px;
+  }
+}
 
 .double-range-slider__labels {
   display: flex;
@@ -896,6 +901,11 @@ figure {
   border-radius: 5px;
   outline-color: rgba(236, 24, 24, 0.5);
   background-color: rgba(255, 255, 255, 0);
+}
+@media (max-width: 992px) {
+  .double-range-slider__label {
+    font-size: 14px;
+  }
 }
 .double-range-slider__inputs {
   position: relative;
@@ -3226,7 +3236,24 @@ figure {
 }
 @media (max-width: 992px) {
   .catalog__filter {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1001;
+    max-width: 300px;
+    height: 100vh;
+    padding: 16px;
+    box-sizing: border-box;
+    overflow: auto;
+    background-color: #ffffff;
+    transform: translateX(-120%);
+    transition: all ease-in-out 0.15s;
+  }
+}
+@media (max-width: 992px) {
+  .catalog__filter.active {
+    transform: translateX(0);
   }
 }
 .catalog__filter-title {
@@ -3238,8 +3265,8 @@ figure {
 }
 @media (max-width: 992px) {
   .catalog__filter-title {
-    margin: 24px 0 20px;
     font-size: 16px;
+    margin: 24px 0 20px;
   }
 }
 .catalog__filter-title:first-child {
@@ -3262,6 +3289,11 @@ figure {
   text-decoration-line: underline;
   cursor: pointer;
 }
+@media (max-width: 992px) {
+  .catalog__filter-checkboxes-toggler {
+    font-size: 14px;
+  }
+}
 .catalog__content {
   flex: 1 1 auto;
 }
@@ -3271,9 +3303,15 @@ figure {
   justify-content: space-between;
   margin-bottom: 16px;
 }
+@media (max-width: 576px) {
+  .catalog__controls {
+    align-items: flex-start;
+  }
+}
 .catalog__controls-sorting {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
   padding-left: 16px;
 }
@@ -3282,6 +3320,53 @@ figure {
     gap: 20px;
     padding: 0;
   }
+}
+.catalog__controls-filter {
+  display: none;
+}
+@media (max-width: 992px) {
+  .catalog__controls-filter {
+    display: block;
+  }
+}
+.catalog__controls-filter-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  color: #111111;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  border: 2px solid #cccccc;
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .catalog__controls-filter-button {
+    font-size: 14px;
+  }
+}
+.catalog__controls-filter-button::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(../assets/icons/filter.svg) center no-repeat;
+  background-size: 100%;
+}
+.catalog__controls-filter-button.active::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: block;
+  background-color: rgba(17, 17, 17, 0.5);
 }
 .catalog__controls-view {
   display: flex;

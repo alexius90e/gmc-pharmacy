@@ -39,3 +39,13 @@ catalogFilterCheckboxes.forEach((catalogFilterCheckboxElem) => {
     }
   });
 });
+
+const catalogControlsFilterButton = document.querySelector(".catalog__controls-filter-button");
+
+if (catalogControlsFilterButton) {
+  catalogControlsFilterButton.addEventListener("click", (event) => {
+    event.currentTarget.classList.toggle("active");
+    const catalogFilter = document.querySelector(".catalog__filter");
+    if (catalogFilter) catalogFilter.classList.toggle('active')
+  });
+}

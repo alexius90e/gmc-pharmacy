@@ -37,5 +37,9 @@
     line-height: 20px;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    @include laptop {
+      font-size: 14px;
+    }
   }
 }

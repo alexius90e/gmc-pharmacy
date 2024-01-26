@@ -21,6 +21,10 @@
     border-radius: 5px;
     outline-color: rgba($color: $red, $alpha: 0.5);
     background-color: rgba($color: $white, $alpha: 0);
+
+    @include laptop {
+      font-size: 14px;
+    }
   }
 
   &__inputs {
