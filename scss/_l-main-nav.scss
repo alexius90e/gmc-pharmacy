@@ -1,6 +1,25 @@
 .main-nav {
   @include tablet {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    max-width: 400px;
+    padding: 60px 0;
+    overflow: auto;
+    background-color: $white;
+    box-shadow: 0 0 16px rgba($color: $black, $alpha: 0.2);
+    transform: translateX(-800px);
+    transition: transform ease-in-out 0.2s;
+    will-change: transform;
+  }
+
+  &.active {
+    @include tablet {
+      transform: translateX(0);
+    }
   }
 
   &__menu {
@@ -17,6 +36,14 @@
       flex-wrap: wrap;
     }
 
+    @include tablet {
+      align-items: flex-start;
+      flex-direction: column;
+      height: 100%;
+      box-sizing: border-box;
+      overflow: auto;
+    }
+
     &-item {
       padding: 16px 8px;
       cursor: pointer;
@@ -29,6 +56,11 @@
         padding: 8px;
       }
 
+      @include tablet {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
       &-text {
         color: $darkgray;
         font-size: 14px;
@@ -36,6 +68,31 @@
         font-weight: 400;
         line-height: 130%;
         transition: $baseTransition;
+
+        @include tablet {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 8px;
+        }
+
+        &_with-submenu {
+          &::after {
+            content: "";
+            display: none;
+            width: 16px;
+            height: 16px;
+            background: url(../assets/icons/dropdown.svg) center no-repeat;
+
+            @include tablet {
+              display: block;
+            }
+          }
+
+          &.active::after {
+            transform: rotate(180deg);
+          }
+        }
       }
 
       &:hover &-text {
@@ -59,10 +116,33 @@
         left: -16px;
         right: -16px;
       }
+
+      @include tablet {
+        position: static;
+        display: none;
+        padding: 8px 16px;
+        box-shadow: none;
+      }
+
+      &.active {
+        @include tablet {
+          display: block;
+        }
+      }
     }
 
     &-item:hover &-submenu-wrapper {
       display: flex;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &-item:hover &-submenu-wrapper.active {
+      @include tablet {
+        display: block;
+      }
     }
   }
 
@@ -76,6 +156,11 @@
     &-item {
       flex: 1 1 calc(100% / 3);
       max-width: calc(100% / 3);
+
+      @include tablet {
+        flex: 0 1 100%;
+        max-width: none;
+      }
     }
 
     &-link {
@@ -96,6 +181,11 @@
       background-color: $white;
       transition: $baseTransition;
 
+      @include tablet {
+        padding: 4px 12px;
+        border-radius: 4px;
+      }
+
       &:hover {
         background-color: $lightgray;
       }
@@ -106,6 +196,10 @@
     flex: 0 0 260px;
     padding-left: 16px;
     border-left: 1px solid rgba($color: $gray, $alpha: 0.3);
+
+    @include tablet {
+      display: none;
+    }
 
     &-title {
       margin: 0 0 16px;
@@ -166,6 +260,21 @@
         font-weight: 700;
         line-height: 130%;
       }
+    }
+  }
+
+  &__close {
+    display: none;
+
+    @include tablet {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border: none;
+      background: url(../assets/icons/close.svg) center no-repeat;
     }
   }
 }

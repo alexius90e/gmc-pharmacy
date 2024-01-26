@@ -1281,6 +1281,18 @@ figure {
 .header__controls-button_burger::before {
   background-image: url(../assets/icons/burger.svg);
 }
+@media (max-width: 768px) {
+  .header__controls-button_burger.active::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(17, 17, 17, 0.5);
+  }
+}
 .header__controls-button-text {
   display: none;
   font-size: 12px;
@@ -2369,7 +2381,25 @@ figure {
 
 @media (max-width: 768px) {
   .main-nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    max-width: 400px;
+    padding: 60px 0;
+    overflow: auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 16px rgba(17, 17, 17, 0.2);
+    transform: translateX(-800px);
+    transition: transform ease-in-out 0.2s;
+    will-change: transform;
+  }
+}
+@media (max-width: 768px) {
+  .main-nav.active {
+    transform: translateX(0);
   }
 }
 .main-nav__menu {
@@ -2387,6 +2417,15 @@ figure {
     flex-wrap: wrap;
   }
 }
+@media (max-width: 768px) {
+  .main-nav__menu {
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+}
 .main-nav__menu-item {
   padding: 16px 8px;
   cursor: pointer;
@@ -2401,6 +2440,12 @@ figure {
     padding: 8px;
   }
 }
+@media (max-width: 768px) {
+  .main-nav__menu-item {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
 .main-nav__menu-item-text {
   color: #777777;
   font-size: 14px;
@@ -2408,6 +2453,29 @@ figure {
   font-weight: 400;
   line-height: 130%;
   transition: all ease-in-out 0.15s;
+}
+@media (max-width: 768px) {
+  .main-nav__menu-item-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+}
+.main-nav__menu-item-text_with-submenu::after {
+  content: "";
+  display: none;
+  width: 16px;
+  height: 16px;
+  background: url(../assets/icons/dropdown.svg) center no-repeat;
+}
+@media (max-width: 768px) {
+  .main-nav__menu-item-text_with-submenu::after {
+    display: block;
+  }
+}
+.main-nav__menu-item-text_with-submenu.active::after {
+  transform: rotate(180deg);
 }
 .main-nav__menu-item:hover .main-nav__menu-item-text {
   color: #111111;
@@ -2430,8 +2498,31 @@ figure {
     right: -16px;
   }
 }
+@media (max-width: 768px) {
+  .main-nav__menu-submenu-wrapper {
+    position: static;
+    display: none;
+    padding: 8px 16px;
+    box-shadow: none;
+  }
+}
+@media (max-width: 768px) {
+  .main-nav__menu-submenu-wrapper.active {
+    display: block;
+  }
+}
 .main-nav__menu-item:hover .main-nav__menu-submenu-wrapper {
   display: flex;
+}
+@media (max-width: 768px) {
+  .main-nav__menu-item:hover .main-nav__menu-submenu-wrapper {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .main-nav__menu-item:hover .main-nav__menu-submenu-wrapper.active {
+    display: block;
+  }
 }
 .main-nav__submenu {
   display: flex;
@@ -2443,6 +2534,12 @@ figure {
 .main-nav__submenu-item {
   flex: 1 1 33.3333333333%;
   max-width: 33.3333333333%;
+}
+@media (max-width: 768px) {
+  .main-nav__submenu-item {
+    flex: 0 1 100%;
+    max-width: none;
+  }
 }
 .main-nav__submenu-link {
   display: inline-block;
@@ -2462,6 +2559,12 @@ figure {
   background-color: #ffffff;
   transition: all ease-in-out 0.15s;
 }
+@media (max-width: 768px) {
+  .main-nav__submenu-link {
+    padding: 4px 12px;
+    border-radius: 4px;
+  }
+}
 .main-nav__submenu-link:hover {
   background-color: #f6f6f6;
 }
@@ -2469,6 +2572,11 @@ figure {
   flex: 0 0 260px;
   padding-left: 16px;
   border-left: 1px solid rgba(204, 204, 204, 0.3);
+}
+@media (max-width: 768px) {
+  .main-nav__bestsellers {
+    display: none;
+  }
 }
 .main-nav__bestsellers-title {
   margin: 0 0 16px;
@@ -2521,6 +2629,21 @@ figure {
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
+}
+.main-nav__close {
+  display: none;
+}
+@media (max-width: 768px) {
+  .main-nav__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: url(../assets/icons/close.svg) center no-repeat;
+  }
 }
 
 .main-slider {

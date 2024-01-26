@@ -185,7 +185,6 @@
       padding: 0;
       border: none;
       background-color: rgba($color: $white, $alpha: 0);
-      
 
       @include tablet {
         flex: 0 1 calc(100% / 6);
@@ -248,19 +247,17 @@
         transition: $baseTransition;
         cursor: pointer;
 
-      
         @include tablet {
           gap: 6px;
           padding: 0;
           border: none;
           border-radius: 0;
           background-color: $white;
-        } 
-        
+        }
+
         &:hover {
           border-color: $black !important;
         }
-
 
         &::before {
           background-image: url(../assets/icons/account.svg);
@@ -294,6 +291,22 @@
         &::before {
           background-image: url(../assets/icons/burger.svg);
         }
+
+        @include tablet {
+        }
+      }
+
+      &_burger.active::after {
+        @include tablet {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 999;
+          background-color: rgba($color: $black, $alpha: 0.5);
+        }
       }
 
       &-text {
@@ -324,7 +337,7 @@
           font-weight: 400;
           line-height: 160%;
           text-transform: none;
-        } 
+        }
       }
 
       &_account:hover &-text {
